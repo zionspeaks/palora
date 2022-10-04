@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+        @font-face {font-family: futura; src: url("./fonts/Futura Light.otf");}
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            a{
+                color: #fff;
+                text-decoration: none;
+            }
+            body{
+                font-family: futura;
+            }
+            .header{
+                color: #fff;
+                background-color: #000;
+                height: 9vh;
+                width: 100vw;
+                position: fixed;
+                color: #fff;
+                display:grid;
+                grid-template-columns: min-content 1fr min-content min-content;
+                grid-template-rows: 100%;
+                align-items: center;
+                grid-gap: 1vh;
+                padding: 0 1vh;
+                box-sizing: border-box;
+                z-index: 10;
+
+            }
+
+            .hero{
+                background-image: url("./images/background.jpg");
+                background-size: cover;
+                height: 100vh;
+                width: 100vw;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                font-size: 10vh;
+                color: #fff;
+                filter: hue-hue-rotate(0deg);
+            }
+                .hero:hover{
+                    filter: hue-rotate(360deg);
+                    transition: 16s;
+                }
+            .bio{
+                background-color: #fff;
+                color: #000;
+                padding: 8vh;
+                box-sizing: border-box;
+                font-size: 3vh;
+            }
+            .links{
+                background-color: #aaa;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header">
+            <a class="home" href="./index.html"style="font-size: 4vh;">PALORA</a>
+            <div><!--Spacer--></div>
+            <a class="spotify" href="http://www.spotify.com" target="_blank"><img src="./images/spotify.svg"
+            style="height: 5vh; width: 5vh;"></a>
+            <a class="youtube" href="http://www.youtube.com" target="_blank"><img src="./images/youtube.svg"style="height: 5vh; width: 5vh;"></a>
+        </div>
+
+        <div class="hero">
+            <div>Palora</div>
+        </div>
+
+        <div class="bio">
+            Hi, <strong»>I'm Matt </strong>& I make music under the name Palora. I enjoy nature & the outdoors. Here is where you can find me online.
+        </div>
+
+        <div class="links">
+            Links
+        </div>
+    </body>
+
+</html>
