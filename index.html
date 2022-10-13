@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
         <style>
         @font-face {font-family: futura; src: url("./fonts/Futura Light.otf");}
             *{
@@ -14,6 +16,7 @@
             body{
                 font-family: futura;
             }
+
             .header{
                 color: #fff;
                 background-color: #000;
@@ -22,7 +25,7 @@
                 position: fixed;
                 color: #fff;
                 display:grid;
-                grid-template-columns: min-content 1fr min-content min-content;
+                grid-template-columns: 1fr min-content 1fr min-content min-content;
                 grid-template-rows: 100%;
                 align-items: center;
                 grid-gap: 1vh;
@@ -31,9 +34,8 @@
                 z-index: 10;
 
             }
-
             .hero{
-                background-image: url("./images/background.jpg");
+                background-image: url("./images/background.png");
                 background-size: cover;
                 height: 100vh;
                 width: 100vw;
@@ -42,28 +44,61 @@
                 justify-content: center;
                 font-size: 10vh;
                 color: #fff;
-                filter: hue-hue-rotate(0deg);
             }
-                .hero:hover{
-                    filter: hue-rotate(360deg);
-                    transition: 16s;
-                }
             .bio{
-                background-color: #fff;
-                color: #000;
-                padding: 8vh;
-                box-sizing: border-box;
-                font-size: 3vh;
+
+                color: #fff;
+                display: grid;
+                align-items: center;
+                justify-content: center;
+                font-size: 10vh;
+                color: #fff;
+                padding: 8vh 1vh;
             }
             .links{
                 background-color: #aaa;
             }
+            .projects{
+                color: #fff;
+                box-sizing: border-box;
+                width: 100%;
+                background-image: url("./images/BackgroundRelease.png");
+                padding: 4vh;
+                display: grid;
+                grid-template-columns: auto min(100%, 180vh) auto;
+                grid-template-rows: 1fr auto;
+            }
+                .project-grid{
+                    grid-area: 2 / 2;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(45vh, 1fr));
+                    gap: 4vh;
+                }
+                .info-wrapper{
+                    padding-bottom: 4vh;
+                    grid-area: 1 / 2;
+                    display: grid;
+                    justify-content: center;
+                }
+                    .info{
+                        font-size: 7vh;
+                    }
+                    .project{
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                        filter: drop-shadow(0 0 1vh #000);
+                        border-radius: min(2vh, 1vw);
+                        background: #0008;
+                        background-size: cover;
+                        display: block;
+                    }
         </style>
     </head>
 
     <body>
-        <div class="header">
-            <a class="home" href="./index.html"style="font-size: 4vh;">PALORA</a>
+        <div class="header"data-aos="fade-down" data-aos-offset="1000">
+            <div><!--Spacer--></div>
+            <div><img src="./images/PaloraLogo.svg" style="height: 15vh; width: 15vh; "></a></div>
             <div><!--Spacer--></div>
             <a class="spotify" href="http://www.spotify.com" target="_blank"><img src="./images/spotify.svg"
             style="height: 5vh; width: 5vh;"></a>
@@ -71,16 +106,28 @@
         </div>
 
         <div class="hero">
-            <div>Palora</div>
+            <div><img src="./images/PaloraLogo.svg"
+            style="height: 50vh; width: 50vh;"></a></div>
         </div>
 
-        <div class="bio">
-            Hi, <strong»>I'm Matt </strong>& I make music under the name Palora. I enjoy nature & the outdoors. Here is where you can find me online.
+        <div class="projects">
+            <div class="info-wrapper">
+                <div class="info">RELEASES</div>
+            </div>
+            <div class="project-grid">
+                <div></div>
+                <img class="project" src="./images/floatawayart.png">
+                <div></div>
+            </div>
         </div>
 
         <div class="links">
             Links
         </div>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     </body>
 
 </html>
